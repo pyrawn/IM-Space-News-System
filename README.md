@@ -88,5 +88,11 @@ IM-Space-News-System/
 - [`dags/spaceflight_dag.py`](dags/spaceflight_dag.py): Airflow DAG definition.
 
 ## Page in use:
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/52939c33-22e7-4241-ac92-366a6273d003" />
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/46ff5d20-dbf1-4ad6-a256-7e59378a0055" />
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/5795bbd0-c15e-459a-81ca-4259605fb747" />
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/e247dd03-653b-4d93-86d8-ab456122edce" />
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/5d725451-9f88-4e9c-be50-9dc9f4136dbd" />
+<img width="1920" height="1140" alt="image" src="https://github.com/user-attachments/assets/b80c5b25-06ef-4629-90b0-5963376be29c" />
 
 *For more details, see the code and comments in each folder.*
