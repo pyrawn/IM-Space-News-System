@@ -1,0 +1,72 @@
+{% extends "catalog/base.html" %}
+{% block content %}
+<div class="container mt-5">
+  <h2 class="text-center mb-4">🚀 Spaceflight News Dashboard</h2>
+
+  <!-- KPIs -->
+  <div class="row text-center mb-5">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Total Articles</h5>
+          <p class="display-6">{{ total_articles }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">News Sites</h5>
+          <p class="display-6">{{ site_count }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Word Cloud -->
+  <div class="mb-5">
+    <h4>☁️ Most Common Words in Titles</h4>
+    <div class="text-center">
+      {{ wordcloud|safe }}
+    </div>
+  </div>
+
+  <!-- Pie Chart -->
+  <div class="mb-5">
+    <h4>📈 Articles by News Site</h4>
+    {{ pie_chart|safe }}
+  </div>
+
+  <!-- Time Series -->
+  <div class="mb-5">
+    <h4>📅 Articles Over Time</h4>
+    {{ time_chart|safe }}
+  </div>
+
+  <!-- Summary Table -->
+  <div class="mb-5">
+    <h4>📖 Articles Summary</h4>
+    {% if summary_table %}
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Summary</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in summary_table %}
+            <tr>
+              <td><a href="{{ row.url }}" target="_blank">{{ row.title }}</a></td>
+              <td>{{ row.summary|truncatewords:30 }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No summary data available.</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
+

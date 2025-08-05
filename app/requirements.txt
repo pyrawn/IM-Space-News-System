@@ -1,0 +1,10 @@
+streamlit
+pymongo
+pandas
+wordcloud
+matplotlib
+Pillow
+requests
+plotly
+tabulate
+Django>=4.0
